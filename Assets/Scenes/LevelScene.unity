@@ -488,6 +488,7 @@ GameObject:
   - component: {fileID: 1113624247}
   - component: {fileID: 1113624246}
   - component: {fileID: 1113624248}
+  - component: {fileID: 1113624249}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -533,12 +534,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 69a2b55b1feae6e41bd2e884f4499c83, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fb7c348587e17ae4ca1ab692d9ae6361, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.54, y: 3.54}
+  m_Size: {x: 0.8, y: 0.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -553,7 +554,7 @@ Transform:
   m_GameObject: {fileID: 1113624245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.58, y: 0.14, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -572,6 +573,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDistance: 2
   numberOfLanes: 3
+--- !u!114 &1113624249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113624245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e47b007d0e8b45b2f9ea2e306c684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frames:
+  - {fileID: 21300000, guid: fb7c348587e17ae4ca1ab692d9ae6361, type: 3}
+  - {fileID: 21300000, guid: a00637ca7b5567d4f8be0b08ace875b2, type: 3}
+  - {fileID: 21300000, guid: 957918dec55006c4a992246b6e032ff8, type: 3}
+  - {fileID: 21300000, guid: f5ab72cf522648b4a86596e03bcb7f69, type: 3}
+  framesPerSecond: 10
 --- !u!1 &1211285396
 GameObject:
   m_ObjectHideFlags: 0
