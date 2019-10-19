@@ -28,19 +28,27 @@ public class DodgeCollision : MonoBehaviour
             Health--;
         }
 
-        //Raycast to check how close the next enemy in this lane is
+        //Raycast to check how close the next enemy in this lane is.
+        //Ray starts from center of player and ignores the player's collider box,
+        //but ONLY IF "QUERIES START IN COLLIDER" IS TURNED OFF IN SETTINGS
+        //(Edit -> Project Settings -> Physics 2D -> Queries start in colliders)
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right);
 
         //When the raycast finds an enemy
         if (hit.collider != null)
         {
+            //Measure how far away the enemy is from the player
             float distance = Mathf.Abs(hit.point.x - transform.position.x);
+
+            //Debug distance measurement
             print (distance);
         }
-        if (hit.collider == null)
-        {
-            print("null");
-        }
+
+        //Debug check for when raycast hits nothing
+        //if (hit.collider == null)
+        //{
+        //    print("null");
+        //}
     }
 
     //If any colliders (since they're all enemies right now) bump against the player,
@@ -54,6 +62,7 @@ public class DodgeCollision : MonoBehaviour
         Health--;
 
         //Enemy is destroyed on impact
+        //This can be changed in future depending on artistic decisions
         GameObject.Destroy(coll.gameObject);
     }
 }
