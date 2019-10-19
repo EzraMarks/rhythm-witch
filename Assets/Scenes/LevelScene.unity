@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 152967491}
   - component: {fileID: 152967490}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: Knight Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9d998e6a58126428b51a7aa6d69061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 3799552951318943288, guid: 84ff8d0176737f64d9c3a5ec75dfd6ea, type: 3}
+  Enemy: {fileID: 3666944615530212765, guid: 754761cf937a10749997caabc5f8caf6, type: 3}
   Lane1SpawnTransform: {fileID: 1336383931}
   Lane2SpawnTransform: {fileID: 1211285398}
   Lane3SpawnTransform: {fileID: 374860597}
