@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 152967491}
   - component: {fileID: 152967490}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: spawner_knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9d998e6a58126428b51a7aa6d69061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 3799552951318943288, guid: 84ff8d0176737f64d9c3a5ec75dfd6ea, type: 3}
+  Enemy: {fileID: 3666944615530212765, guid: 754761cf937a10749997caabc5f8caf6, type: 3}
   Lane1SpawnTransform: {fileID: 1336383931}
   Lane2SpawnTransform: {fileID: 1211285398}
   Lane3SpawnTransform: {fileID: 374860597}
@@ -559,7 +559,7 @@ Transform:
   m_LocalScale: {x: 2.45, y: 2.45, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1113624248
 MonoBehaviour:
@@ -871,6 +871,53 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1587824928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1587824930}
+  - component: {fileID: 1587824929}
+  m_Layer: 0
+  m_Name: spawner_bat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1587824929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587824928}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea9d998e6a58126428b51a7aa6d69061, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy: {fileID: 6051935948728285761, guid: 260a45b25388d1d4c9920cbf8fb779e5, type: 3}
+  Lane1SpawnTransform: {fileID: 1336383931}
+  Lane2SpawnTransform: {fileID: 1211285398}
+  Lane3SpawnTransform: {fileID: 374860597}
+--- !u!4 &1587824930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587824928}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.28072956, y: -1.4869238, z: -2.1583376}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
