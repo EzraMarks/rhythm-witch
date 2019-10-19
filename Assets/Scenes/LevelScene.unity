@@ -489,6 +489,8 @@ GameObject:
   - component: {fileID: 1113624246}
   - component: {fileID: 1113624248}
   - component: {fileID: 1113624249}
+  - component: {fileID: 1113624251}
+  - component: {fileID: 1113624250}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -553,8 +555,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1113624245}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.58, y: 0.14, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: -4.58, y: 0.17, z: 0}
+  m_LocalScale: {x: 2.45, y: 2.45, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -603,14 +605,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.54, y: 3.54}
-    newSize: {x: 3.54, y: 3.54}
+    oldSize: {x: 0.8, y: 0.8}
+    newSize: {x: 0.8, y: 0.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 4}
+  m_Size: {x: 0.5, y: 0.65}
   m_EdgeRadius: 0
 --- !u!50 &1113624251
 Rigidbody2D:
