@@ -23,6 +23,23 @@ public class DodgeCollision : MonoBehaviour
         {
             //Debug message for player losing the game (placeholder until death is fleshed out)
             print("The Player has lost the game.");
+
+            //Change health to prevent thousands of prints
+            Health--;
+        }
+
+        //Raycast to check how close the next enemy in this lane is
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right);
+
+        //When the raycast finds an enemy
+        if (hit.collider != null)
+        {
+            float distance = Mathf.Abs(hit.point.x - transform.position.x);
+            print (distance);
+        }
+        if (hit.collider == null)
+        {
+            print("null");
         }
     }
 
