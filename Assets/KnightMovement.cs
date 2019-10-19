@@ -16,6 +16,6 @@ public class KnightMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position += new Vector3(KnightSpeed * -1 * Time.deltaTime, 0, 0);
     }
 }
