@@ -5,6 +5,9 @@ Temp/
 Obj/
 UnityGenerated/
 Library/
+Logs/
+Packages/
+
 Assets/AssetStoreTools*
 
 # ===================================== #
