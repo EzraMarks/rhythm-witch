@@ -52,7 +52,7 @@ public class DodgeCollision : MonoBehaviour
             distance = Mathf.Abs(hit.point.x - transform.position.x);
             
             //Debug distance measurement
-            print (distance);
+            //print (distance);
         }
 
         //Debug check for when raycast hits nothing
