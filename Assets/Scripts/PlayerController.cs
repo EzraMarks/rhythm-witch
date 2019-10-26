@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     //"targets" is an array to store all on-screen enemies
     //This way, the "bomb" can destroy them all at once
     GameObject[] targets;
+    
 
     // Update is called once per frame
     void Update()
@@ -137,5 +138,6 @@ public class PlayerController : MonoBehaviour
                 playerPosition--;
             }
         }
+
     }
 }

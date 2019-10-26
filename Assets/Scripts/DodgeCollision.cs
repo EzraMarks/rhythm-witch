@@ -14,6 +14,9 @@ public class DodgeCollision : MonoBehaviour
     //Collider for transform math in raycast section of Update()
     //Collider2D playerCollider;
 
+    //The health bar's gameobject script "HealthBar"
+    public HealthBar HealthBar;
+        
     // Start is called before the first frame update
     void Start()
     {
@@ -78,10 +81,13 @@ public class DodgeCollision : MonoBehaviour
         //This helps us time enemy spawning and movement
         //Ideally enemies should collide very shortly AFTER the beat
         //This lets the player get "perfect" inputs on the beat
-        print(GameObject.Find("MusicConductor").GetComponent<Composer>().songPositionInBeats);
+        //print(GameObject.Find("MusicConductor").GetComponent<Composer>().songPositionInBeats);
 
         //Player loses one health
         Health--;
+
+        //Calls HealthBarDamage function to change health bar
+        HealthBar.HealthBarDamage();
 
         //Enemy is destroyed on impact
         //This can be changed in future depending on artistic decisions
