@@ -229,10 +229,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9d998e6a58126428b51a7aa6d69061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 3666944615530212765, guid: 754761cf937a10749997caabc5f8caf6, type: 3}
-  Lane1SpawnTransform: {fileID: 1336383931}
-  Lane2SpawnTransform: {fileID: 1211285398}
-  Lane3SpawnTransform: {fileID: 374860597}
+  enemy: {fileID: 0}
+  lane1SpawnTransform: {fileID: 0}
+  lane2SpawnTransform: {fileID: 0}
+  lane3SpawnTransform: {fileID: 0}
+  enemySpawnFilePath: ./Assets/Scripts/enemySpawnSequence.txt
 --- !u!4 &152967491
 Transform:
   m_ObjectHideFlags: 0
@@ -826,10 +827,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9d998e6a58126428b51a7aa6d69061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 6051935948728285761, guid: 260a45b25388d1d4c9920cbf8fb779e5, type: 3}
-  Lane1SpawnTransform: {fileID: 1336383931}
-  Lane2SpawnTransform: {fileID: 1211285398}
-  Lane3SpawnTransform: {fileID: 374860597}
+  enemy: {fileID: 0}
+  lane1SpawnTransform: {fileID: 0}
+  lane2SpawnTransform: {fileID: 0}
+  lane3SpawnTransform: {fileID: 0}
+  enemySpawnFilePath: 
 --- !u!4 &1587824930
 Transform:
   m_ObjectHideFlags: 0

@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class Spawn : MonoBehaviour
@@ -14,31 +16,74 @@ public class Spawn : MonoBehaviour
     int lane2NextIndex;
     int lane3NextIndex;
 
-    //Enemy object and lane position declarations
-    public GameObject Enemy;
-    public Transform Lane1SpawnTransform;
-    public Transform Lane2SpawnTransform;
-    public Transform Lane3SpawnTransform;
+    //enemy object and lane position declarations
+    public GameObject enemy;
+    public Transform lane1SpawnTransform;
+    public Transform lane2SpawnTransform;
+    public Transform lane3SpawnTransform;
+
+    // path for the file containing the enemy spawning sequence, e.g.:
+    // b0 b19 k20 <-- lane 1
+    // b0 k19 b30 <-- lane 2
+    // b3 k10 k30 <-- lane 3
+    public string enemySpawnFilePath;
+
+    // a letter e.g. "k" or "b" which identifies this enemy in the spawn sequence file
+    public string enemyIdentifier;
+
+    // ReadFromFile reads in the enemy spawn sequence from a text file
+    float[][] ReadFromFile()
+    {
+        List<float>[] enemySpawnSequence = { new List<float>(), new List<float>(), new List<float>() };
+
+        StreamReader reader = new StreamReader(enemySpawnFilePath);
+        String itemStrings;
+        char[] delimiter = { ' ' };
+
+        for (int lane = 0; lane < 3; lane++)
+        {
+            itemStrings = reader.ReadLine();
+            string[] fields = itemStrings.Split(delimiter);
+
+            for (int i = 0; i < fields.Length; i++)
+            {
+                if (fields[i].StartsWith(enemyIdentifier))
+                {
+                    string intString = fields[i].Substring(1);
+                    float beatNum = 0;
+                    if (!float.TryParse(intString, out beatNum))
+                    {
+                        beatNum = 0; // TODO improve error condition -- failures result in enemy spawn on beat 0
+                    }
+                    enemySpawnSequence[lane].Add(beatNum);
+                }
+            }
+        }
+
+        float[][] enemySpawnSequenceArray = { enemySpawnSequence[0].ToArray(), enemySpawnSequence[1].ToArray(), enemySpawnSequence[2].ToArray() };
+        return enemySpawnSequenceArray;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+        float[][] enemySequence = ReadFromFile();
 
         //TESTTESTTEST
         //Testing if prefab instantiation works
-        //Instantiate(Enemy, new Vector3(0,0,0), Quaternion.identity);
+        //Instantiate(enemy, new Vector3(0,0,0), Quaternion.identity);
 
         //The level-wide array for this enemy's spawn pattern on lane 1 (top lane)
         //This enemy will spawn a new one at these beats of the song
-        lane1SpawnBeats = new float[2] { 3, 12 };
+        lane1SpawnBeats = enemySequence[0];
 
         //The level-wide array for this enemy's spawn pattern on lane 2 (middle lane)
         //This enemy will spawn a new one at these beats of the song
-        lane2SpawnBeats = new float[2] { 6, 9 };
+        lane2SpawnBeats = enemySequence[1];
 
         //The level-wide array for this enemy's spawn pattern on lane 3 (bottom lane)
         //This enemy will spawn a new one at these beats of the song
-        lane3SpawnBeats = new float[2] { 9, 12 };
+        lane3SpawnBeats = enemySequence[2];
 
         //Index counter variables for each array
         lane1NextIndex = 0;
@@ -46,16 +91,16 @@ public class Spawn : MonoBehaviour
         lane3NextIndex = 0;
 
         //The lane 1 spawn location for the enemies
-        GameObject Lane1Spawn = GameObject.Find("Lane 1 Spawn");
-        Transform Lane1SpawnTransform = Lane1Spawn.GetComponent<Transform>();
+        GameObject lane1Spawn = GameObject.Find("Lane 1 Spawn");
+        Transform lane1SpawnTransform = lane1Spawn.GetComponent<Transform>();
 
         //The lane 2 spawn location for the enemies
-        GameObject Lane2Spawn = GameObject.Find("Lane 2 Spawn");
-        Transform Lane2SpawnTransform = Lane2Spawn.GetComponent<Transform>();
+        GameObject lane2Spawn = GameObject.Find("Lane 2 Spawn");
+        Transform lane2SpawnTransform = lane2Spawn.GetComponent<Transform>();
 
         //The lane 3 spawn location for the enemies
-        GameObject Lane3Spawn = GameObject.Find("Lane 3 Spawn");
-        Transform Lane3SpawnTransform = Lane3Spawn.GetComponent<Transform>();
+        GameObject lane3Spawn = GameObject.Find("Lane 3 Spawn");
+        Transform lane3SpawnTransform = lane3Spawn.GetComponent<Transform>();
 
         //Call conductor object for song position
         GameObject conductor = GameObject.Find("MusicConductor");
@@ -75,10 +120,10 @@ public class Spawn : MonoBehaviour
             if (lane1SpawnBeats[lane1NextIndex] <= GameObject.Find("MusicConductor").GetComponent<Composer>().songPositionInBeats)
             {
                 //Debug check to make sure spawns are timing properly
-                print("Spawn Lane 1 confirm");
+                print("Spawn lane 1 confirm");
 
                 //Create new enemy
-                Instantiate(Enemy, Lane1SpawnTransform);
+                Instantiate(enemy, lane1SpawnTransform);
 
 
                 //Update index counter variable
@@ -91,10 +136,10 @@ public class Spawn : MonoBehaviour
             if (lane2SpawnBeats[lane2NextIndex] <= GameObject.Find("MusicConductor").GetComponent<Composer>().songPositionInBeats)
             {
                 //Debug check to make sure spawns are timing properly
-                print("Spawn Lane 2 confirm");
+                print("Spawn lane 2 confirm");
 
                 //Create new enemy
-                Instantiate(Enemy, Lane2SpawnTransform);
+                Instantiate(enemy, lane2SpawnTransform);
 
                 //Update index counter variable
                 lane2NextIndex++;
@@ -106,10 +151,10 @@ public class Spawn : MonoBehaviour
             if (lane3SpawnBeats[lane3NextIndex] <= GameObject.Find("MusicConductor").GetComponent<Composer>().songPositionInBeats)
             {
                 //Debug check to make sure spawns are timing properly
-                print("Spawn Lane 3 confirm");
+                print("Spawn lane 3 confirm");
 
                 //Create new enemy
-                Instantiate(Enemy, Lane3SpawnTransform);
+                Instantiate(enemy, lane3SpawnTransform);
 
                 //Update index counter variable
                 lane3NextIndex++;
