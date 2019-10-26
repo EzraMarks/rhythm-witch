@@ -74,6 +74,12 @@ public class DodgeCollision : MonoBehaviour
         //Debug message for player taking damage
         print("Taken 1 damage");
 
+        //Debug message for beat number (which beat of the song)
+        //This helps us time enemy spawning and movement
+        //Ideally enemies should collide very shortly AFTER the beat
+        //This lets the player get "perfect" inputs on the beat
+        print(GameObject.Find("MusicConductor").GetComponent<Composer>().songPositionInBeats);
+
         //Player loses one health
         Health--;
 
