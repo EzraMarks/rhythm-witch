@@ -133,22 +133,38 @@ public class PlayerController : MonoBehaviour
                 if (distance < 1.2 && distance >= 1)
                 {
                     score += 100;
-                    meterfill += 1;
+                    meterfill += 20;
+                    if (meterfill > 100)
+                    {
+                        meterfill = 100;
+                    }
                 }
                 if (distance < 1 && distance >= 0.8)
                 {
                     score += 300;
-                    meterfill += 3;
+                    meterfill += 30;
+                    if (meterfill > 100)
+                    {
+                        meterfill = 100;
+                    }
                 }
                 if (distance < 0.8 && distance >= 0.7)
                 {
                     score += 500;
-                    meterfill += 5;
+                    meterfill += 40;
+                    if (meterfill > 100)
+                    {
+                        meterfill = 100;
+                    }
                 }
                 if (distance < 0.7 && distance >= 0.6)
                 {
                     score += 1000;
-                    meterfill += 10;
+                    meterfill += 50;
+                    if (meterfill > 100)
+                    {
+                        meterfill = 100;
+                    }
                 }
 
                 //Once the dodge reward/punishment is calculated, the player moves
