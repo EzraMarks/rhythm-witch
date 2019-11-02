@@ -6,6 +6,7 @@ public class HealthBar : MonoBehaviour
 {
     //Set up the sprite array used to pull sprites for the health bar animation
     //Includes sprites for every health state: 3, 2, and 1 health
+    //0-3 are 1 health, 4-7 are 2 health, 8-11 are full health
     public Sprite[] frameReservoir;
 
 
