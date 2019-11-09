@@ -22,21 +22,20 @@ public class Spawn : MonoBehaviour
     public Transform lane2SpawnTransform;
     public Transform lane3SpawnTransform;
 
-    // path for the file containing the enemy spawning sequence, e.g.:
-    // b0 b19 k20 <-- lane 1
-    // b0 k19 b30 <-- lane 2
-    // b3 k10 k30 <-- lane 3
-    public string enemySpawnFilePath;
-
     // a letter e.g. "k" or "b" which identifies this enemy in the spawn sequence file
     public string enemyIdentifier;
 
     // ReadFromFile reads in the enemy spawn sequence from a text file
+        // path for the file containing the enemy spawning sequence, e.g.:
+        // b0 b19 k20 <-- lane 1
+        // b0 k19 b30 <-- lane 2
+        // b3 k10 k30 <-- lane 3
     float[][] ReadFromFile()
     {
         List<float>[] enemySpawnSequence = { new List<float>(), new List<float>(), new List<float>() };
 
-        StreamReader reader = new StreamReader(enemySpawnFilePath);
+        StreamReader reader = new StreamReader(Path.Combine(Application.streamingAssetsPath, "enemySpawnSequence.txt"));
+
         String itemStrings;
         char[] delimiter = { ' ' };
 
