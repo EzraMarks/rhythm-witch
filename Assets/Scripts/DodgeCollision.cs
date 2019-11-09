@@ -34,7 +34,7 @@ public class DodgeCollision : MonoBehaviour
         //Check for it the player has run out of health
         if (Health == 0)
         {
-            GameOver();
+            StartCoroutine(GameOver());
         }
 
         //Raycast to check how close the next enemy in this lane is.
@@ -77,7 +77,7 @@ public class DodgeCollision : MonoBehaviour
 
         //Cosmetic stuff for now; should be updated when bells and whistles get added
         //Destroy player object
-        Destroy(GameObject.Find("Player"));
+        Destroy(GameObject.Find("Player").GetComponent<SpriteRenderer>());
         //Wait several seconds
         yield return new WaitForSeconds(3);
         //Load Game Over screen

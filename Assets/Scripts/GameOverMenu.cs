@@ -19,11 +19,16 @@ public class GameOverMenu : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenuScene");
+        SceneManager.LoadScene("MenuScene");
     }
 
     public void GameQuit()
     {
         Application.Quit();
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene("LevelScene");
     }
 }
