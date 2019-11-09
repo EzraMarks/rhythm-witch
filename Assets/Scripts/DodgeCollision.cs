@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DodgeCollision : MonoBehaviour
 {
@@ -33,11 +34,7 @@ public class DodgeCollision : MonoBehaviour
         //Check for it the player has run out of health
         if (Health == 0)
         {
-            //Debug message for player losing the game (placeholder until death is fleshed out)
-            print("The Player has lost the game.");
-
-            //Change health to prevent thousands of prints
-            Health--;
+            StartCoroutine(GameOver());
         }
 
         //Raycast to check how close the next enemy in this lane is.
@@ -68,6 +65,23 @@ public class DodgeCollision : MonoBehaviour
             distance = 20;
         }
 
+    }
+
+    IEnumerator GameOver()
+    {
+        //Debug message for player losing the game (placeholder until death is fleshed out)
+        print("The Player has lost the game.");
+
+        //Change health to prevent thousands of prints
+        Health--;
+
+        //Cosmetic stuff for now; should be updated when bells and whistles get added
+        //Destroy player object
+        Destroy(GameObject.Find("Player").GetComponent<SpriteRenderer>());
+        //Wait several seconds
+        yield return new WaitForSeconds(3);
+        //Load Game Over screen
+        SceneManager.LoadScene("GameOverScene");
     }
 
     //If any colliders (since they're all enemies right now) bump against the player,
