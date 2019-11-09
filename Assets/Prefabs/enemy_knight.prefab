@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6389537857556085748}
   - component: {fileID: 3982004434495033445}
   - component: {fileID: 4438553208420852028}
-  - component: {fileID: 6338484246339837760}
   m_Layer: 0
   m_Name: enemy_knight
   m_TagString: Enemy
@@ -141,15 +140,3 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b23ef7cd5f07e5c49a6307afc95e3f0d, type: 3}
   - {fileID: 21300000, guid: 8c6ec34c829609e4db117f1cebf396fb, type: 3}
   framesPerSecond: 10
---- !u!114 &6338484246339837760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3666944615530212765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e762b48c7f649d447b29cee368d52de4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
