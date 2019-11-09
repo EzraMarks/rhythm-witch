@@ -22,4 +22,9 @@ public class KnightMovement : MonoBehaviour
         //Can modify with more lines/scripts later to match movement to beat cosmetically
         transform.position += new Vector3(KnightSpeed * -1 * Time.deltaTime, 0, 0);
     }
+
+    private void OnDestroy()
+    {
+        // destroy animation
+    }
 }

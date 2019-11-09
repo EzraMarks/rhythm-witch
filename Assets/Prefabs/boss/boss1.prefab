@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5658642955264215647}
   - component: {fileID: 911833286147696629}
-  - component: {fileID: 8486695607412289835}
+  - component: {fileID: 1372921797168293807}
   m_Layer: 0
   m_Name: boss1
   m_TagString: Enemy
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8486695607412289835
+--- !u!114 &1372921797168293807
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,3 +93,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f69089f0424954a8e63a6b27f089b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextBossPhase: {fileID: 4268403410099747181, guid: bdbd3f14e49732c4989d3763b8e5c797,
+    type: 3}
