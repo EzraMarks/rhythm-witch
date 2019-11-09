@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Boss3Movement : MonoBehaviour
 {
@@ -19,6 +21,6 @@ public class Boss3Movement : MonoBehaviour
 
     private void OnDestroy()
     {
-
+        SceneManager.LoadScene("VictoryScene");
     }
 }
