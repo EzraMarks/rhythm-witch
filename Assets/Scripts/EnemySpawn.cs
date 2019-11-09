@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public class Spawn : MonoBehaviour
+public class EnemySpawn : MonoBehaviour
 
 {
 
