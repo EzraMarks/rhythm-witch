@@ -72,25 +72,30 @@ public class DodgeCollision : MonoBehaviour
 
     //If any colliders (since they're all enemies right now) bump against the player,
     //the player takes damage
+    //Damage is NOT taken if player is in the middle of a movement
     void OnTriggerEnter2D(Collider2D coll)
     {
-        //Debug message for player taking damage
-        print("Taken 1 damage");
+        bool playerinvincible = GameObject.Find("Player").GetComponent<PlayerController>().playerinvincible;
+        if (playerinvincible == false)
+        {
+            //Debug message for player taking damage
+            print("Taken 1 damage");
 
-        //Debug message for beat number (which beat of the song)
-        //This helps us time enemy spawning and movement
-        //Ideally enemies should collide very shortly AFTER the beat
-        //This lets the player get "perfect" inputs on the beat
-        //print(GameObject.Find("MusicConductor").GetComponent<Composer>().songPositionInBeats);
+            //Debug message for beat number (which beat of the song)
+            //This helps us time enemy spawning and movement
+            //Ideally enemies should collide very shortly AFTER the beat
+            //This lets the player get "perfect" inputs on the beat
+            //print(GameObject.Find("MusicConductor").GetComponent<Composer>().songPositionInBeats);
 
-        //Player loses one health
-        Health--;
+            //Player loses one health
+            Health--;
 
-        //Calls HealthBarDamage function to change health bar
-        HealthBar.HealthBarDamage();
+            //Calls HealthBarDamage function to change health bar
+            HealthBar.HealthBarDamage();
 
-        //Enemy is destroyed on impact
-        //This can be changed in future depending on artistic decisions
-        GameObject.Destroy(coll.gameObject);
+            //Enemy is destroyed on impact
+            //This can be changed in future depending on artistic decisions
+            GameObject.Destroy(coll.gameObject);
+        }
     }
 }
