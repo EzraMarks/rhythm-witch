@@ -8,13 +8,13 @@ public class BackgroundSpawner : MonoBehaviour
     private double nextActionTime = 0.0;
     public double backgroundSpawnPeriod = 1;
 
-    public GameObject layer0;
-    public GameObject layer1;
+    public GameObject layer;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        nextActionTime += backgroundSpawnPeriod;
+        Instantiate(layer);
     }
 
     // Update is called once per frame
@@ -23,8 +23,7 @@ public class BackgroundSpawner : MonoBehaviour
         if (Time.time > nextActionTime)
         {
             nextActionTime += backgroundSpawnPeriod;
-            Instantiate(layer0);
-            Instantiate(layer1);
+            Instantiate(layer);
         }
     }
 }
