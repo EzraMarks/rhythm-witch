@@ -20,11 +20,14 @@ public class Boss2Movement : MonoBehaviour
 
     private void OnDestroy()
     {
-        // creating a local game object to store the instantiated object and then casting it to a Gamebject
-        nextBossPhase = Instantiate(nextBossPhase) as GameObject;
+        if (GameObject.Find("Player").GetComponent<DodgeCollision>().Health > 0)
+        {
+            // creating a local game object to store the instantiated object and then casting it to a Gamebject
+            nextBossPhase = Instantiate(nextBossPhase) as GameObject;
 
-        // Setting the position of the prefab
-        nextBossPhase.transform.position =
+            // Setting the position of the prefab
+            nextBossPhase.transform.position =
             new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+        }
     }
 }

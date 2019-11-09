@@ -21,6 +21,9 @@ public class Boss3Movement : MonoBehaviour
 
     private void OnDestroy()
     {
-        SceneManager.LoadScene("VictoryScene");
+        if (GameObject.Find("Player").GetComponent<DodgeCollision>().Health > 0)
+        {
+            SceneManager.LoadScene("VictoryScene");
+        }
     }
 }
