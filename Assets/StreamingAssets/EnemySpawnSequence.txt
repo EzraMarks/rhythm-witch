@@ -1,9 +1,3 @@
 b bk kkkkkkkkkkkkkkkk   b
 k b  k bbbbbbbbbbbbbbbb
 kb bkbk
-
-b1 b5 k9 k13 k17 b21 b25 k29
-b3 k7 b11 k15 b19 b23 k27 k31
-k4 b8 b12 b16 k20 b24 b28 k32
-
-240 total beats before boss, assuming 1.5 min song
