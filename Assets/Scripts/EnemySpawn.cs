@@ -23,7 +23,7 @@ public class EnemySpawn : MonoBehaviour
     public Transform lane3SpawnTransform;
 
     // a letter e.g. "k" or "b" which identifies this enemy in the spawn sequence file
-    public string enemyIdentifier;
+    public char enemyIdentifier;
 
     // ReadFromFile reads in the enemy spawn sequence from a text file
         // path for the file containing the enemy spawning sequence, e.g.:
@@ -37,24 +37,17 @@ public class EnemySpawn : MonoBehaviour
         StreamReader reader = new StreamReader(Path.Combine(Application.streamingAssetsPath, "enemySpawnSequence.txt"));
 
         String itemStrings;
-        char[] delimiter = { ' ' };
 
         for (int lane = 0; lane < 3; lane++)
         {
             itemStrings = reader.ReadLine();
-            string[] fields = itemStrings.Split(delimiter);
+            char[] fields = itemStrings.ToCharArray();
 
             for (int i = 0; i < fields.Length; i++)
             {
-                if (fields[i].StartsWith(enemyIdentifier))
+                if (fields[i] == enemyIdentifier)
                 {
-                    string intString = fields[i].Substring(1);
-                    float beatNum = 0;
-                    if (!float.TryParse(intString, out beatNum))
-                    {
-                        beatNum = 0; // TODO improve error condition -- failures result in enemy spawn on beat 0
-                    }
-                    enemySpawnSequence[lane].Add(beatNum);
+                    enemySpawnSequence[lane].Add(i);
                 }
             }
         }
