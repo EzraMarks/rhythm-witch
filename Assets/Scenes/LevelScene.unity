@@ -662,6 +662,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8358698246433457519, guid: e260201d2b48bd843a77a78ebfa32001,
+        type: 3}
+      propertyPath: enemyIdentifier
+      value: 98
+      objectReference: {fileID: 0}
+    - target: {fileID: 8358698246433457505, guid: e260201d2b48bd843a77a78ebfa32001,
+        type: 3}
+      propertyPath: enemyIdentifier
+      value: 107
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e260201d2b48bd843a77a78ebfa32001, type: 3}
 --- !u!1 &673406459
@@ -692,7 +702,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9dca670a80dfbd342a4488f28991ab13, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 13df4c4a5e9d9d549a9dbda843c98f59, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -796,7 +806,7 @@ MonoBehaviour:
   songPositionInBeats: 0
   dspSongTime: 0
   musicSource: {fileID: 0}
-  firstBeatOffset: 2
+  firstBeatOffset: 0
 --- !u!4 &673406462
 Transform:
   m_ObjectHideFlags: 0

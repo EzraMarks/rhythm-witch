@@ -43,11 +43,11 @@ public class EnemySpawn : MonoBehaviour
             itemStrings = reader.ReadLine();
             char[] fields = itemStrings.ToCharArray();
 
-            for (int i = 0; i < fields.Length; i++)
+            for (int i = 2; i < fields.Length; i++)
             {
                 if (fields[i] == enemyIdentifier)
                 {
-                    enemySpawnSequence[lane].Add(i);
+                    enemySpawnSequence[lane].Add((float)i/2);
                 }
             }
         }
