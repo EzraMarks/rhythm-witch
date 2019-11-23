@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5658642955264215647}
   - component: {fileID: 911833286147696629}
   - component: {fileID: 1372921797168293807}
+  - component: {fileID: -4454199884846984900}
   m_Layer: 0
   m_Name: boss1
   m_TagString: Enemy
@@ -70,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 8b356bb6718b6344c9974bcefa6d17f5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2a67b305fe6869f45aafb88185bce2f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,3 +96,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextBossPhase: {fileID: 4268403410099747181, guid: bdbd3f14e49732c4989d3763b8e5c797,
     type: 3}
+--- !u!114 &-4454199884846984900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3184203931216754013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca1e47b007d0e8b45b2f9ea2e306c684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frames:
+  - {fileID: 21300000, guid: 7137b78d71fcd1e44b477636e7bd06a1, type: 3}
+  - {fileID: 21300000, guid: c5a4989f8ed2ea94cb6c5193a360e93e, type: 3}
+  - {fileID: 21300000, guid: 44c9835751827a74197f449a94e5a550, type: 3}
+  - {fileID: 21300000, guid: be349a077c4c728469a053adc2b76b17, type: 3}
+  - {fileID: 21300000, guid: 75556f68f6c95de4db48b6de9bd509b9, type: 3}
+  - {fileID: 21300000, guid: 5419c238430fc4b4ca0ee69f3d9a2db2, type: 3}
+  framesPerSecond: 10.638

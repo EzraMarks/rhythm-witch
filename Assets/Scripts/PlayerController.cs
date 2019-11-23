@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-
+    //The super meter image object
     public Image Meter;
 
+    //Lane movement parameters
     public float moveDistance = 10;
     public int numberOfLanes = 3;
     private int playerPosition = 1;
@@ -48,6 +49,9 @@ public class PlayerController : MonoBehaviour
     //Variable for how much distance the player's movement has covered so far
     float distancecovered;
 
+    //Boolean to trigger boss phase changes
+    public bool bossgothurt = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +67,9 @@ public class PlayerController : MonoBehaviour
             //Empty meter
             meterfill = 0;
 
+            //Start IEnumerator BossHurt to temporarily set boss spawning parameters
+            StartCoroutine(BossHurt());
+
             //Create an array with every enemy on screen
             targets = GameObject.FindGameObjectsWithTag("Enemy");
 
@@ -73,6 +80,16 @@ public class PlayerController : MonoBehaviour
                 Destroy(targets[i]);
             }
         }
+    }
+
+    IEnumerator BossHurt()
+    {
+        //Set bossgothurt boolean to allow boss phase change
+        bossgothurt = true;
+        //Wait several seconds
+        yield return new WaitForSeconds(3);
+        //Reset bossgothurt boolean to prevent bugs with boss spawning
+        bossgothurt = false;
     }
 
     void IncreaseScore()
@@ -209,14 +226,18 @@ public class PlayerController : MonoBehaviour
             //Debug print
             //print("Bomb");
         }
+
         // if up key is pressed
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) && playermovingup == false && playermovingdown == false)
         {
+            playermovingup = true;
             MoveUp();
         }
+
         // if down key is pressed
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) && playermovingdown == false && playermovingup == false)
         {
+            playermovingdown = true;
             MoveDown();
         }
 
