@@ -226,14 +226,18 @@ public class PlayerController : MonoBehaviour
             //Debug print
             //print("Bomb");
         }
+
         // if up key is pressed
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) && playermovingup == false && playermovingdown == false)
         {
+            playermovingup = true;
             MoveUp();
         }
+
         // if down key is pressed
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) && playermovingdown == false && playermovingup == false)
         {
+            playermovingdown = true;
             MoveDown();
         }
 
