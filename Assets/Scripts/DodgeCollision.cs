@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class DodgeCollision : MonoBehaviour
 {
+    //DamageAnimation gameobject (overlay animation effect)
+    public DamageAnimator DamageAnimator;
 
     //Player health; this number of hits results in the player losing
     public float Health;
@@ -94,6 +96,9 @@ public class DodgeCollision : MonoBehaviour
         {
             //Debug message for player taking damage
             print("Taken 1 damage");
+
+            //Calls coroutine in DamageAnimation to start animation
+            StartCoroutine(DamageAnimator.DamageAnimation());
 
             //Debug message for beat number (which beat of the song)
             //This helps us time enemy spawning and movement
