@@ -7,10 +7,12 @@ using UnityEngine.SceneManagement;
 public class Boss3Movement : MonoBehaviour
 {
 
+    bool bossgothurt;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        bool bossgothurt = GameObject.Find("Player").GetComponent<PlayerController>().bossgothurt;
     }
 
     // Update is called once per frame
@@ -21,7 +23,8 @@ public class Boss3Movement : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (GameObject.Find("Player").GetComponent<DodgeCollision>().Health > 0)
+        bool bossgothurt = GameObject.Find("Player").GetComponent<PlayerController>().bossgothurt;
+        if (bossgothurt == true && GameObject.Find("Player").GetComponent<DodgeCollision>().Health > 0)
         {
             SceneManager.LoadScene("VictoryScene");
         }

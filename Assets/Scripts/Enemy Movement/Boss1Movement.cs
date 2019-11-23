@@ -5,11 +5,12 @@ using UnityEngine;
 public class Boss1Movement : MonoBehaviour
 {
     public GameObject nextBossPhase;
+    bool bossgothurt;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        bool bossgothurt = GameObject.Find("Player").GetComponent<PlayerController>().bossgothurt;
     }
 
     // Update is called once per frame
@@ -20,7 +21,8 @@ public class Boss1Movement : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (GameObject.Find("Player").GetComponent<DodgeCollision>().Health > 0)
+        bool bossgothurt = GameObject.Find("Player").GetComponent<PlayerController>().bossgothurt;
+        if (bossgothurt == true)
         {
             // creating a local game object to store the instantiated object and then casting it to a Gamebject
             nextBossPhase = Instantiate(nextBossPhase) as GameObject;
