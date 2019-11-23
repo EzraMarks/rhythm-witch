@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     public bool playerinvincible = false;
 
     //Character "speed" (how fast the movement is)
-    float speed = 10;
+    float speed = 18;
     //Boolean for if the player is moving up
     bool playermovingup;
     //Boolean for if player is moving down

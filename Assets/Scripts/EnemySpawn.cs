@@ -25,19 +25,29 @@ public class EnemySpawn : MonoBehaviour
     // a letter e.g. "k" or "b" which identifies this enemy in the spawn sequence file
     public char enemyIdentifier;
 
+    /* A helper function to skip reading a certain number of lines in the enemy spawn text file
+     * Inputs:
+     * reader: the StreamReader for the enemy spawn text file
+     * numLines: the number of lines to skip
+     */ 
+    void SkipLines(StreamReader reader, int numLines)
+    {
+        for (int i = 0; i < numLines; i++) // skip over numLines of text from file
+        {
+            reader.ReadLine();
+        }
+    }
+    
     // ReadFromFile reads in the enemy spawn sequence from a text file
-        // path for the file containing the enemy spawning sequence, e.g.:
-        // b0 b19 k20 <-- lane 1
-        // b0 k19 b30 <-- lane 2
-        // b3 k10 k30 <-- lane 3
     float[][] ReadFromFile()
     {
         List<float>[] enemySpawnSequence = { new List<float>(), new List<float>(), new List<float>() };
 
-        StreamReader reader = new StreamReader(Path.Combine(Application.streamingAssetsPath, "enemySpawnSequence.txt"));
+        StreamReader reader = new StreamReader(Path.Combine(Application.streamingAssetsPath, "EnemySpawnSequence.txt"));
+
+        SkipLines(reader, 3);
 
         String itemStrings;
-
         for (int lane = 0; lane < 3; lane++)
         {
             itemStrings = reader.ReadLine();
@@ -47,10 +57,11 @@ public class EnemySpawn : MonoBehaviour
             {
                 if (fields[i] == enemyIdentifier)
                 {
-                    enemySpawnSequence[lane].Add((float)i/2);
+                    enemySpawnSequence[lane].Add((float)i / 2);
                 }
             }
         }
+
 
         float[][] enemySpawnSequenceArray = { enemySpawnSequence[0].ToArray(), enemySpawnSequence[1].ToArray(), enemySpawnSequence[2].ToArray() };
         return enemySpawnSequenceArray;
