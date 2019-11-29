@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 911833286147696629}
   - component: {fileID: 1372921797168293807}
   - component: {fileID: -4454199884846984900}
+  - component: {fileID: -4877589348270738617}
+  - component: {fileID: 8145962159602400363}
   m_Layer: 0
   m_Name: boss1
   m_TagString: Enemy
@@ -27,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3184203931216754013}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -34, y: 0, z: 0}
-  m_LocalScale: {x: 14, y: 14, z: 1}
+  m_LocalPosition: {x: -3.4, y: 0, z: 0}
+  m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -116,3 +118,35 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 75556f68f6c95de4db48b6de9bd509b9, type: 3}
   - {fileID: 21300000, guid: 5419c238430fc4b4ca0ee69f3d9a2db2, type: 3}
   framesPerSecond: 10.638
+--- !u!114 &-4877589348270738617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3184203931216754013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeaebef1afa2890478662109a0dead31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 6051935948728285761, guid: 260a45b25388d1d4c9920cbf8fb779e5, type: 3}
+  enemyIdentifier: 98
+  spawnSequenceFilename: BossSequence1.txt
+  loopDurationInBeats: 80
+--- !u!114 &8145962159602400363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3184203931216754013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeaebef1afa2890478662109a0dead31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 3666944615530212765, guid: 754761cf937a10749997caabc5f8caf6, type: 3}
+  enemyIdentifier: 107
+  spawnSequenceFilename: BossSequence1.txt
+  loopDurationInBeats: 80

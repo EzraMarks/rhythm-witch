@@ -61,7 +61,7 @@ public class DodgeCollision : MonoBehaviour
         if (hit.collider == null)
         {
             //Debug message for no raycast hit
-            print("null");
+            //print("null");
 
             //Set distance value arbitrarily high to guarantee no points/meter
             distance = 20;

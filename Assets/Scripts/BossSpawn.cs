@@ -7,7 +7,7 @@ using UnityEngine;
 public class BossSpawn : MonoBehaviour
 {
     // beat on which to spawn the boss
-    public int bossSpawnBeat = 5;
+    public float bossSpawnBeat = 5;
 
     // whether the boss has been spawned yet
     bool bossSpawned = false;
