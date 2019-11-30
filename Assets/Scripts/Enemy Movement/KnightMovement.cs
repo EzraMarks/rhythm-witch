@@ -21,6 +21,8 @@ public class KnightMovement : MonoBehaviour
         //Constant movement to the left, starting from spawn
         //Can modify with more lines/scripts later to match movement to beat cosmetically
         transform.position += new Vector3(KnightSpeed * -1 * Time.deltaTime, 0, 0);
+
+        Destroy(gameObject, 4F); // despawn enemy after 8 seconds
     }
 
     private void OnDestroy()

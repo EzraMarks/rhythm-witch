@@ -94,4 +94,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundSpeed: 0.5
-  backgroundDespawnTime: 100
+  backgroundDespawnTime: 60
