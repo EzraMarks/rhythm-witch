@@ -1540,6 +1540,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4474290472232702592, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
+        type: 3}
+      propertyPath: bossSpawnBeat
+      value: 199
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474290472232702592, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3, type: 3}
 --- !u!1001 &5955078760387209552
