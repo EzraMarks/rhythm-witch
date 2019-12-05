@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class DodgeCollision : MonoBehaviour
 {
+    //REMEMBER TO UN-COMMENT GAME OVER COROUTINE BEFORE FINAL BUILD!!!!!!!!
+    
     //DamageAnimation gameobject (overlay animation effect)
     public DamageAnimator DamageAnimator;
 
@@ -36,6 +38,8 @@ public class DodgeCollision : MonoBehaviour
         //Check for it the player has run out of health
         if (Health == 0)
         {
+            //COMMENT THIS COROUTINE OUT TO PREVENT GAME OVER WHILE TESTING
+            //UN-COMMENT THIS FOR FINAL BUILD/PLAYTESTING!!!
             //StartCoroutine(GameOver());
         }
 
@@ -92,7 +96,9 @@ public class DodgeCollision : MonoBehaviour
     void OnTriggerEnter2D(Collider2D coll)
     {
         bool playerinvincible = GameObject.Find("Player").GetComponent<PlayerController>().playerinvincible;
-        if (playerinvincible == false)
+        bool playerdamageboost = GameObject.Find("DamageAnimation").GetComponent<DamageAnimator>().playerdamageboost;
+
+        if (playerinvincible == false && playerdamageboost == false)
         {
             //Debug message for player taking damage
             print("Taken 1 damage");

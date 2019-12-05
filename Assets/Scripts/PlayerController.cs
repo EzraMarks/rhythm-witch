@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    //Player object for sound effect script references
+    public WitchSFX WitchSFX;
+
     //The super meter image object
     public Image Meter;
 
@@ -79,6 +82,9 @@ public class PlayerController : MonoBehaviour
                 //Kills enemies marked by bomb function (should be all enemies)
                 Destroy(targets[i]);
             }
+
+            //Play the sound effect for the bomb
+            WitchSFX.BombSFX();
         }
     }
 
@@ -97,8 +103,32 @@ public class PlayerController : MonoBehaviour
         //Assign score value based on how close player is to enemy
         //The closer the enemy is, the more "on beat" a dodge is
         //Score and meter values can be changed as needed
+
+        //Each player movement invokes a sound effect as well.
+        //Sound effects are assigned based on score gain in the if functions below.
+
+        //No points for moves above a certain distance away, but still sound effects
+        if (distance > 1.2)
+        {
+            if (playermovingup == true)
+            {
+                WitchSFX.MoveUpSFX();
+            }
+            if (playermovingdown == true)
+            {
+                WitchSFX.MoveDownSFX();
+            }
+        }
         if (distance < 1.2 && distance >= 1)
         {
+            if (playermovingup == true)
+            {
+                WitchSFX.MoveUpSFX();
+            }
+            if (playermovingdown == true)
+            {
+                WitchSFX.MoveDownSFX();
+            }
             score += 100;
             meterfill += 20;
             if (meterfill > 100)
@@ -108,6 +138,14 @@ public class PlayerController : MonoBehaviour
         }
         if (distance < 1 && distance >= 0.8)
         {
+            if (playermovingup == true)
+            {
+                WitchSFX.MoveUpSFX();
+            }
+            if (playermovingdown == true)
+            {
+                WitchSFX.MoveDownSFX();
+            }
             score += 300;
             meterfill += 30;
             if (meterfill > 100)
@@ -117,6 +155,14 @@ public class PlayerController : MonoBehaviour
         }
         if (distance < 0.8 && distance >= 0.7)
         {
+            if (playermovingup == true)
+            {
+                WitchSFX.MoveUpGoodSFX();
+            }
+            if (playermovingdown == true)
+            {
+                WitchSFX.MoveDownGoodSFX();
+            }
             score += 500;
             meterfill += 40;
             if (meterfill > 100)
@@ -126,6 +172,14 @@ public class PlayerController : MonoBehaviour
         }
         if (distance < 0.7 && distance >= 0.6)
         {
+            if (playermovingup == true)
+            {
+                WitchSFX.MoveUpGoodSFX();
+            }
+            if (playermovingdown == true)
+            {
+                WitchSFX.MoveDownGoodSFX();
+            }
             score += 1000;
             meterfill += 50;
             if (meterfill > 100)
@@ -150,6 +204,9 @@ public class PlayerController : MonoBehaviour
             //Measure how far away the enemy is from the player
             distance = Mathf.Abs(hit.point.x - transform.position.x);
 
+            //Set boolean as true for update function
+            playermovingup = true;
+            
             //Score changing function
             IncreaseScore();
 
@@ -168,9 +225,6 @@ public class PlayerController : MonoBehaviour
 
             //Set start time for movement for interpolation stuff
             timestart = Time.time;
-
-            //Set boolean as true for update function
-            playermovingup = true;
 
             // increment the player lane marker variable
             playerPosition++;
@@ -193,6 +247,9 @@ public class PlayerController : MonoBehaviour
             //Measure how far away the enemy is from the player
             distance = Mathf.Abs(hit.point.x - transform.position.x);
 
+            //Set boolean as true for update function
+            playermovingdown = true;
+            
             //Score increase function
             IncreaseScore();
 
@@ -207,9 +264,6 @@ public class PlayerController : MonoBehaviour
 
             //Set start time for movement for interpolation stuff
             timestart = Time.time;
-
-            //Set boolean as true for update function
-            playermovingdown = true;
 
             // decrement the player lane
             playerPosition--;

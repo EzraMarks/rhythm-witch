@@ -9,8 +9,9 @@ public class HealthBar : MonoBehaviour
     //0-3 are 1 health, 4-7 are 2 health, 8-11 are full health
     public Sprite[] frameReservoir;
 
+    //Player object for sound effect script references
+    public WitchSFX WitchSFX;
 
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +43,9 @@ public class HealthBar : MonoBehaviour
         //For losing the first heart
         if (GameObject.Find("Player").GetComponent<DodgeCollision>().Health == 2)
         {
+            //Play the damage sound effect
+            WitchSFX.DamageSFX();
+
             //Gif Animator script, so that animation can be changed
             GifAnimator GifAnimator = GetComponent<GifAnimator>();
 
@@ -59,6 +63,9 @@ public class HealthBar : MonoBehaviour
         //For losing the second heart
         if (GameObject.Find("Player").GetComponent<DodgeCollision>().Health == 1)
         {
+            //Play the damage sound effect
+            WitchSFX.DamageSFX();
+
             //Gif Animator script, so that animation can be changed
             GifAnimator GifAnimator = GetComponent<GifAnimator>();
 
@@ -76,6 +83,9 @@ public class HealthBar : MonoBehaviour
         //For losing the final heart and losing
         if (GameObject.Find("Player").GetComponent<DodgeCollision>().Health == 0)
         {
+            //Play the damage sound effect
+            WitchSFX.DamageSFX();
+
             //Gif Animator script, so that animation can be changed
             GifAnimator GifAnimator = GetComponent<GifAnimator>();
 
