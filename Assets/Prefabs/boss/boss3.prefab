@@ -134,6 +134,7 @@ MonoBehaviour:
   loopDurationInBeats: 64
   muteMusicObject: 
   unmuteMusicObject: 
+  unmuteMusicVolume: 1
 --- !u!114 &9165664913658717465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,3 +153,4 @@ MonoBehaviour:
   loopDurationInBeats: 64
   muteMusicObject: Boss2Music
   unmuteMusicObject: Boss3Music
+  unmuteMusicVolume: 1

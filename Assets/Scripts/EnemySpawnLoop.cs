@@ -134,10 +134,17 @@ public class EnemySpawnLoop : MonoBehaviour
         //Enable boss loop music
         if (script.songPositionInBeats >= loopStartBeat)
         {
-            AudioSource muteMusic = GameObject.Find(muteMusicObject).GetComponent<AudioSource>();
-            muteMusic.volume = 0F;
-            AudioSource unmuteMusic = GameObject.Find(unmuteMusicObject).GetComponent<AudioSource>();
-            unmuteMusic.volume = 1F;
+            if (muteMusicObject != "")
+            {
+                AudioSource muteMusic = GameObject.Find(muteMusicObject).GetComponent<AudioSource>();
+                muteMusic.volume = 0F;
+            }
+
+            if (unmuteMusicObject != "")
+            {
+                AudioSource unmuteMusic = GameObject.Find(unmuteMusicObject).GetComponent<AudioSource>();
+                unmuteMusic.volume = 1F;
+            }
         }
 
 
