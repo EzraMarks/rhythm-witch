@@ -25,6 +25,7 @@ public class VictoryMenu : MonoBehaviour
     public void MainMenu()
     {
         WitchSFX.ButtonForward();
+        Destroy(GameObject.Find("Scorekeeper"));
         SceneManager.LoadScene("MenuScene");
     }
 
