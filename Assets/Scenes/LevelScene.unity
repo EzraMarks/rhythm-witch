@@ -807,7 +807,7 @@ AudioSource:
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
-  BypassEffects: 0
+  BypassEffects: 1
   BypassListenerEffects: 0
   BypassReverbZones: 0
   rolloffCustomCurve:
@@ -1998,10 +1998,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4474290472232702592, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
+        type: 3}
+      propertyPath: bossSpawnBeat
+      value: 191
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474290472232702592, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5338965398747753311, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3, type: 3}
