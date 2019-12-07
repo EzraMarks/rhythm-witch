@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    //Player object for sound effect script references
+    //Background object for sound effect script references
     public WitchSFX WitchSFX;
 
     //The super meter image object

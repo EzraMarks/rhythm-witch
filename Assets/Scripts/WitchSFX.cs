@@ -11,6 +11,10 @@ public class WitchSFX : MonoBehaviour
     public AudioClip movedowngood;
     public AudioClip takedamage;
     public AudioClip bomb;
+    public AudioClip startbutton;
+    public AudioClip buttonforward;
+    public AudioClip buttonbackward;
+    public AudioClip menumove;
     AudioSource AudioSource;
 
     // Start is called before the first frame update
@@ -53,5 +57,25 @@ public class WitchSFX : MonoBehaviour
     public void BombSFX()
     {
         AudioSource.PlayOneShot(bomb, 0.8f);
+    }
+
+    public void StartButton()
+    {
+        AudioSource.PlayOneShot(startbutton, 0.8f);
+    }
+
+    public void ButtonForward()
+    {
+        AudioSource.PlayOneShot(buttonforward, 0.8f);
+    }
+
+    public void ButtonBackward()
+    {
+        AudioSource.PlayOneShot(buttonbackward, 0.8f);
+    }
+
+    public void MenuMove()
+    {
+        AudioSource.PlayOneShot(menumove, 0.8f);
     }
 }
