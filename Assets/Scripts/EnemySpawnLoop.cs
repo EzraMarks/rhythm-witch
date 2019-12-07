@@ -12,6 +12,8 @@ public class EnemySpawnLoop : MonoBehaviour
     public char enemyIdentifier; // letter (eg 'b') identifying enemy in spawn sequence .txt file
     public String spawnSequenceFilename; // the filename.txt of the spawn sequence
     public float loopDurationInBeats = 80; // number of beats before the sequence loops
+    public String muteMusicObject; // mute this: name of object with audio source containing music
+    public String unmuteMusicObject; // unmute this: name of object with audio source containing boss music loop
 
     // Arrays containing beat numbers on which to spawn enemy for each lane
     float[] lane1SpawnBeats;
@@ -129,9 +131,18 @@ public class EnemySpawnLoop : MonoBehaviour
 
         }
 
+        //Enable boss loop music
+        if (script.songPositionInBeats >= loopStartBeat)
+        {
+            AudioSource muteMusic = GameObject.Find(muteMusicObject).GetComponent<AudioSource>();
+            muteMusic.volume = 0F;
+            AudioSource unmuteMusic = GameObject.Find(unmuteMusicObject).GetComponent<AudioSource>();
+            unmuteMusic.volume = 1F;
+        }
+
 
         //Check for if current song beat matches the spawn array
-        if (lane1NextIndex <= lane1SpawnBeats.Length - 1)
+            if (lane1NextIndex <= lane1SpawnBeats.Length - 1)
         {
             if (lane1SpawnBeats[lane1NextIndex] <= (script.songPositionInBeats - loopStartBeat))
             {
