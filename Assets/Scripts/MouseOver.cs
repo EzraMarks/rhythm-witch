@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class VictoryMenu : MonoBehaviour
+public class MouseOver : MonoBehaviour
 {
 
     //Background object for sound effect script references
@@ -19,22 +18,11 @@ public class VictoryMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
-    public void MainMenu()
-    {
-        WitchSFX.ButtonForward();
-        SceneManager.LoadScene("MenuScene");
-    }
-
-    public void GameQuit()
-    {
-        WitchSFX.ButtonBackward();
-        Application.Quit();
-    }
-
-    public void MouseOver()
+    //When the mouse goes over the button, play the little sound effect
+    void OnMouseEnter()
     {
         WitchSFX.MenuMove();
     }

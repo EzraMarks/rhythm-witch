@@ -5,10 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class GameOverMenu : MonoBehaviour
 {
+
+    //Background object for sound effect script references
+    public WitchSFX WitchSFX;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        //Find the background spawner object to assign the SFX script
+        WitchSFX = GameObject.Find("BackgroundSpawner").GetComponent<WitchSFX>();
     }
 
     // Update is called once per frame
@@ -19,16 +24,24 @@ public class GameOverMenu : MonoBehaviour
 
     public void MainMenu()
     {
+        WitchSFX.ButtonBackward();
         SceneManager.LoadScene("MenuScene");
     }
 
     public void GameQuit()
     {
+        WitchSFX.ButtonBackward();
         Application.Quit();
     }
 
     public void Retry()
     {
+        WitchSFX.ButtonForward();
         SceneManager.LoadScene("LevelScene");
+    }
+
+    public void MouseOver()
+    {
+        WitchSFX.MenuMove();
     }
 }
