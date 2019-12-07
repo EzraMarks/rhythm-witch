@@ -40,7 +40,7 @@ public class DodgeCollision : MonoBehaviour
         {
             //COMMENT THIS COROUTINE OUT TO PREVENT GAME OVER WHILE TESTING
             //UN-COMMENT THIS FOR FINAL BUILD/PLAYTESTING!!!
-            //StartCoroutine(GameOver());
+            StartCoroutine(GameOver());
         }
 
         //Raycast to check how close the next enemy in this lane is.
