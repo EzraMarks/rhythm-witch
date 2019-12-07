@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   KnightSpeed: 10
+  deathpoof: {fileID: 192992056193094703, guid: f607de1069ebd6144acdb7eb926ad7fa,
+    type: 3}
 --- !u!61 &6223335812347676601
 BoxCollider2D:
   m_ObjectHideFlags: 0
