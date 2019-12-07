@@ -278,7 +278,7 @@ public class PlayerController : MonoBehaviour
         {
             Bomb();
             //Debug print
-            //print("Bomb");
+            print("Bomb");
         }
 
         // if up key is pressed

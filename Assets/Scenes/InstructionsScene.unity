@@ -96,7 +96,6 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -158,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -173, y: -243}
-  m_SizeDelta: {x: 316.1, y: 69}
+  m_AnchoredPosition: {x: 0.0000076294, y: -204}
+  m_SizeDelta: {x: 212.4, y: 46.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &373314031
 MonoBehaviour:
@@ -360,7 +359,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -404,8 +402,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020820071}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.998, y: 1.333, z: 0}
-  m_LocalScale: {x: 4.2666883, y: 2.206146, z: 1}
+  m_LocalPosition: {x: -1.88, y: 1.04, z: 0}
+  m_LocalScale: {x: 2.385079, y: 1.2332356, z: 0.559}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -444,8 +442,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -145.74, y: -24.3}
-  m_SizeDelta: {x: 860.5, y: 74.9}
+  m_AnchoredPosition: {x: -135, y: -28.5}
+  m_SizeDelta: {x: 388.5, y: 51.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1087454339
 MonoBehaviour:
@@ -467,10 +465,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -478,7 +476,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Your power chord might even help you out when the boss shows up...
+  m_Text: ~~ Your power chord might even help you out when the boss shows up...
 --- !u!222 &1087454340
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -518,7 +516,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -542,7 +539,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -50
   m_Sprite: {fileID: 21300000, guid: 5eb5c694f2ed092458d1e09527b7112d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -599,7 +596,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -643,8 +639,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1246384743}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.28, y: -2.94, z: 0}
-  m_LocalScale: {x: 0.213, y: 0.213, z: 0.213}
+  m_LocalPosition: {x: 4.03, y: -5.18, z: 0}
+  m_LocalScale: {x: 0.133764, y: 0.133764, z: 0.133764}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -702,7 +698,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3.6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -766,8 +762,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -261.53, y: 168.1}
-  m_SizeDelta: {x: 628.93, y: 66.31}
+  m_AnchoredPosition: {x: -187.2, y: 104.8}
+  m_SizeDelta: {x: 284, y: 46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1524870722
 MonoBehaviour:
@@ -789,10 +785,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -800,7 +796,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The closer you dodge enemies to the beat, the more power you'll get!
+  m_Text: ~~ The closer you dodge enemies to the beat, the more power you'll get!
 --- !u!222 &1524870723
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -840,7 +836,6 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -884,8 +879,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526324193}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.01, y: 1.329, z: 0}
-  m_LocalScale: {x: 4.119844, y: 2.0731769, z: 1}
+  m_LocalPosition: {x: -1.8869998, y: 1.0370001, z: 0}
+  m_LocalScale: {x: 2.3029928, y: 1.1589059, z: 0.559}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -924,8 +919,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -244.56, y: 258}
-  m_SizeDelta: {x: 662.87, y: 83.68}
+  m_AnchoredPosition: {x: -179.6, y: 167.1}
+  m_SizeDelta: {x: 299.3, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1669406419
 MonoBehaviour:
@@ -947,10 +942,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -958,7 +953,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press the "up" and "down" arrow keys to dodge enemies coming at you!
+  m_Text: ~~ Press the "up" and "down" arrow keys to dodge enemies coming at you!
 --- !u!222 &1669406420
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1001,8 +996,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -182.1, y: 75.477}
-  m_SizeDelta: {x: 787.8, y: 67.9}
+  m_AnchoredPosition: {x: -151.4, y: 40.6}
+  m_SizeDelta: {x: 355.7, y: 47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1817291711
 MonoBehaviour:
@@ -1024,10 +1019,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1035,8 +1030,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: When your power meter is full, you can press the "right" arrow key to unleash
-    a power chord that wipes out all the enemies on the screen!
+  m_Text: ~~ When your power meter is full, you can press the "right" arrow key to
+    unleash a power chord that wipes out all the enemies on the screen!
 --- !u!222 &1817291712
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1102,10 +1097,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0

@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6242568420520253094}
   - component: {fileID: 8971702998445254169}
   - component: {fileID: 4428104244609756370}
+  - component: {fileID: 7294461085366079979}
   m_Layer: 0
   m_Name: clouds
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,3 +96,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundSpeed: 0.5
   backgroundDespawnTime: 60
+--- !u!114 &7294461085366079979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4351878149863218752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c814782cd2f8804584f430870a66a5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
