@@ -682,10 +682,10 @@ RectTransform:
   m_Father: {fileID: 1411872479}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.08, y: 0.05}
-  m_AnchorMax: {x: 0.5, y: 0.11}
-  m_AnchoredPosition: {x: 189, y: 212}
-  m_SizeDelta: {x: -97.98999, y: -11.279999}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -179.62, y: -240.2}
+  m_SizeDelta: {x: 200.76, y: 15.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &531224457
 MonoBehaviour:
@@ -1558,7 +1558,7 @@ MonoBehaviour:
   movedown: {fileID: 8300000, guid: 4f74c32de03ebd34faebb4d7e42ce501, type: 3}
   movedowngood: {fileID: 8300000, guid: bd8e577d9d9d94647b4d5913ae752e67, type: 3}
   takedamage: {fileID: 8300000, guid: d2190d08a9089c548875e5cfef950109, type: 3}
-  bomb: {fileID: 8300000, guid: a9f80dad953afc14b9bf772bece1402b, type: 3}
+  bomb: {fileID: 8300000, guid: 3ad6096f69247ba4fb31012f8f82d8a6, type: 3}
 --- !u!82 &1916841781
 AudioSource:
   m_ObjectHideFlags: 0

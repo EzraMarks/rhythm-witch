@@ -9,6 +9,9 @@ public class KnightMovement : MonoBehaviour
     //Change this speed value so that Knight enemy reaches player in desired beat number
     public float KnightSpeed = 1;
 
+    //Death poof prefab for death animation
+    public GameObject deathpoof;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +28,11 @@ public class KnightMovement : MonoBehaviour
         Destroy(gameObject, 4F); // despawn enemy after 8 seconds
     }
 
+    //When the enemy is destroyed by a bomb or impact
     private void OnDestroy()
     {
         // destroy animation
+        //Start the death animation by spawning a death poof prefab on the enemy transform
+        Instantiate(deathpoof, transform.position, Quaternion.identity);
     }
 }
