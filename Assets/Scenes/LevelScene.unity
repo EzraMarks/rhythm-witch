@@ -814,7 +814,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 145ad47e450cc0644bd91cfec7934315, type: 3}
   - {fileID: 21300000, guid: 714a44c9cfb79b54e86511b2107aaf69, type: 3}
   - {fileID: 21300000, guid: 8ca225b0bf3490d4f84eecd7cfe318c9, type: 3}
-  WitchSFX: {fileID: 1916841780}
+  WitchSFX: {fileID: 0}
 --- !u!114 &937761742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1141,7 +1141,7 @@ PrefabInstance:
         type: 3}
       propertyPath: WitchSFX
       value: 
-      objectReference: {fileID: 1916841780}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c772570857f13124c9ccf8b953ed6d2c, type: 3}
 --- !u!1 &1916841779 stripped
@@ -1150,24 +1150,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1905039996}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1916841780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916841779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de8c764e4242d9841b02984d37ff7399, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveup: {fileID: 8300000, guid: 90924128d4c0b6544bfdbb7df5fbe2e9, type: 3}
-  moveupgood: {fileID: 8300000, guid: 7c08adb5a1e69ba41ba9f801080b7f37, type: 3}
-  movedown: {fileID: 8300000, guid: 4f74c32de03ebd34faebb4d7e42ce501, type: 3}
-  movedowngood: {fileID: 8300000, guid: bd8e577d9d9d94647b4d5913ae752e67, type: 3}
-  takedamage: {fileID: 8300000, guid: d2190d08a9089c548875e5cfef950109, type: 3}
-  bomb: {fileID: 8300000, guid: 3ad6096f69247ba4fb31012f8f82d8a6, type: 3}
 --- !u!82 &1916841781
 AudioSource:
   m_ObjectHideFlags: 0
