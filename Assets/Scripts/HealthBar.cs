@@ -15,6 +15,9 @@ public class HealthBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Find the background spawner object to assign the SFX script
+        WitchSFX = GameObject.Find("BackgroundSpawner").GetComponent<WitchSFX>();
+
         //Gif Animator script, so that animation can be changed
         GifAnimator GifAnimator = GetComponent<GifAnimator>();
 
