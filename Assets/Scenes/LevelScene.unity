@@ -1348,6 +1348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cab93f3126a00194186973d0638dd9d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
 --- !u!114 &1413147098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1475,6 +1476,11 @@ PrefabInstance:
         type: 3}
       propertyPath: WitchSFX
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183971523639466879, guid: c772570857f13124c9ccf8b953ed6d2c,
+        type: 3}
+      propertyPath: moveSound
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c772570857f13124c9ccf8b953ed6d2c, type: 3}
@@ -1933,6 +1939,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4474290472232702592, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
+        type: 3}
+      propertyPath: bossSpawnBeat
+      value: 191
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474290472232702592, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5338965398747753297, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
         type: 3}
       propertyPath: m_Enabled
@@ -1997,16 +2013,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4474290472232702592, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
-        type: 3}
-      propertyPath: bossSpawnBeat
-      value: 191
-      objectReference: {fileID: 0}
-    - target: {fileID: 4474290472232702592, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5338965398747753311, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
         type: 3}

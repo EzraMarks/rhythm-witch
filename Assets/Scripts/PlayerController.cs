@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     public int numberOfLanes = 3;
     private int playerPosition = 1;
 
+    //Boolean determining whether to play movement sound
+    public bool moveSound = false;
+
     //The distance between the player and the nearest enemy
     //This is used to determine meter fill and/or score
     float distance;
@@ -109,14 +112,18 @@ public class PlayerController : MonoBehaviour
         //Sound effects are assigned based on score gain in the if functions below.
 
         //No points for moves above a certain distance away, but still sound effects
-        if (playermovingup == true)
+        if (moveSound)
         {
-            WitchSFX.MoveUpSFX();
+            if (playermovingup == true)
+            {
+                WitchSFX.MoveUpSFX();
+            }
+            if (playermovingdown == true)
+            {
+                WitchSFX.MoveDownSFX();
+            }
         }
-        if (playermovingdown == true)
-        {
-            WitchSFX.MoveDownSFX();
-        }
+        
         print("Distance is: " + distance);
         if (distance < 1.2 && distance >= 1)
         {

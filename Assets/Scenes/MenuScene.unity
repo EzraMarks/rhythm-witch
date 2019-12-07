@@ -1129,11 +1129,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1501961621}
     m_Modifications:
-    - target: {fileID: 6250430991154248537, guid: ca67f04e75403da4696c5f112616df32,
-        type: 3}
-      propertyPath: m_Name
-      value: foreground buildings
-      objectReference: {fileID: 0}
     - target: {fileID: 4613374101758036024, guid: ca67f04e75403da4696c5f112616df32,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1188,6 +1183,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250430991154248537, guid: ca67f04e75403da4696c5f112616df32,
+        type: 3}
+      propertyPath: m_Name
+      value: foreground buildings
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca67f04e75403da4696c5f112616df32, type: 3}
@@ -1350,6 +1350,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1501961621}
     m_Modifications:
+    - target: {fileID: 5023245668630026174, guid: 791929b4259e4e242a80343699888344,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 7863762766400505653, guid: 791929b4259e4e242a80343699888344,
         type: 3}
       propertyPath: m_Name
@@ -1419,11 +1424,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5023245668630026174, guid: 791929b4259e4e242a80343699888344,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: -10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 791929b4259e4e242a80343699888344, type: 3}
@@ -1946,7 +1946,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d6fc523699f5ce44eb52cb07c8503c88, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 96441ec85d8713244b529ed78da158b6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
