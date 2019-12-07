@@ -123,7 +123,7 @@ public class EnemySpawn : MonoBehaviour
             if (lane1SpawnBeats[lane1NextIndex] <= GameObject.Find("MusicConductor").GetComponent<Composer>().songPositionInBeats)
             {
                 //Debug check to make sure spawns are timing properly
-                print("Spawn lane 1 confirm");
+                //print("Spawn lane 1 confirm");
 
                 //Create new enemy
                 Instantiate(enemy, lane1SpawnTransform);
@@ -139,7 +139,7 @@ public class EnemySpawn : MonoBehaviour
             if (lane2SpawnBeats[lane2NextIndex] <= GameObject.Find("MusicConductor").GetComponent<Composer>().songPositionInBeats)
             {
                 //Debug check to make sure spawns are timing properly
-                print("Spawn lane 2 confirm");
+                //print("Spawn lane 2 confirm");
 
                 //Create new enemy
                 Instantiate(enemy, lane2SpawnTransform);
@@ -154,7 +154,7 @@ public class EnemySpawn : MonoBehaviour
             if (lane3SpawnBeats[lane3NextIndex] <= GameObject.Find("MusicConductor").GetComponent<Composer>().songPositionInBeats)
             {
                 //Debug check to make sure spawns are timing properly
-                print("Spawn lane 3 confirm");
+                //print("Spawn lane 3 confirm");
 
                 //Create new enemy
                 Instantiate(enemy, lane3SpawnTransform);

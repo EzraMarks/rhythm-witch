@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
     public int numberOfLanes = 3;
     private int playerPosition = 1;
 
+    //Boolean determining whether to play movement sound
+    public bool moveSound = false;
+
     //The distance between the player and the nearest enemy
     //This is used to determine meter fill and/or score
     float distance;
@@ -109,7 +112,7 @@ public class PlayerController : MonoBehaviour
         //Sound effects are assigned based on score gain in the if functions below.
 
         //No points for moves above a certain distance away, but still sound effects
-        if (distance > 1.2)
+        if (moveSound)
         {
             if (playermovingup == true)
             {
@@ -120,73 +123,32 @@ public class PlayerController : MonoBehaviour
                 WitchSFX.MoveDownSFX();
             }
         }
+        
+        print("Distance is: " + distance);
         if (distance < 1.2 && distance >= 1)
         {
-            if (playermovingup == true)
-            {
-                WitchSFX.MoveUpSFX();
-            }
-            if (playermovingdown == true)
-            {
-                WitchSFX.MoveDownSFX();
-            }
             score += 100;
             meterfill += 20;
-            if (meterfill > 100)
-            {
-                meterfill = 100;
-            }
         }
         if (distance < 1 && distance >= 0.8)
         {
-            if (playermovingup == true)
-            {
-                WitchSFX.MoveUpSFX();
-            }
-            if (playermovingdown == true)
-            {
-                WitchSFX.MoveDownSFX();
-            }
             score += 300;
             meterfill += 30;
-            if (meterfill > 100)
-            {
-                meterfill = 100;
-            }
         }
         if (distance < 0.8 && distance >= 0.7)
         {
-            if (playermovingup == true)
-            {
-                WitchSFX.MoveUpGoodSFX();
-            }
-            if (playermovingdown == true)
-            {
-                WitchSFX.MoveDownGoodSFX();
-            }
             score += 500;
             meterfill += 40;
-            if (meterfill > 100)
-            {
-                meterfill = 100;
-            }
         }
         if (distance < 0.7 && distance >= 0.6)
         {
-            if (playermovingup == true)
-            {
-                WitchSFX.MoveUpGoodSFX();
-            }
-            if (playermovingdown == true)
-            {
-                WitchSFX.MoveDownGoodSFX();
-            }
             score += 1000;
             meterfill += 50;
-            if (meterfill > 100)
-            {
-                meterfill = 100;
-            }
+        }
+
+        if (meterfill > 100)
+        {
+            meterfill = 100;
         }
     }
 
