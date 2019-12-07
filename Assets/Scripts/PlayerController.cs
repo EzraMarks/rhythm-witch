@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
         if (meterfill == 100)
         {
             //Empty meter
-            meterfill = 0;
+            meterfill = 10;
 
             //Start IEnumerator BossHurt to temporarily set boss spawning parameters
             StartCoroutine(BossHurt());
