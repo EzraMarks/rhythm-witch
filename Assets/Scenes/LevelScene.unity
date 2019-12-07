@@ -274,7 +274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 102464572}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.09, y: -3.235, z: -11.572266}
+  m_LocalPosition: {x: -5.09, y: -3.135, z: -11.572266}
   m_LocalScale: {x: 0.145, y: 0.13756, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1325,16 +1325,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6183971523639466866, guid: c772570857f13124c9ccf8b953ed6d2c,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6183971523639466866, guid: c772570857f13124c9ccf8b953ed6d2c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6183971523639466864, guid: c772570857f13124c9ccf8b953ed6d2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1389,6 +1379,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183971523639466866, guid: c772570857f13124c9ccf8b953ed6d2c,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183971523639466866, guid: c772570857f13124c9ccf8b953ed6d2c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6183971523639466877, guid: c772570857f13124c9ccf8b953ed6d2c,
         type: 3}
@@ -1680,11 +1680,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8287727358890944122, guid: 226d3b361da60a54f82885d512758169,
-        type: 3}
-      propertyPath: m_Name
-      value: Health Bar
-      objectReference: {fileID: 0}
     - target: {fileID: 2815280037340178061, guid: 226d3b361da60a54f82885d512758169,
         type: 3}
       propertyPath: m_Sprite
@@ -1711,6 +1706,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8287727358890944122, guid: 226d3b361da60a54f82885d512758169,
+        type: 3}
+      propertyPath: m_Name
+      value: Health Bar
+      objectReference: {fileID: 0}
     - target: {fileID: 8869196205912939822, guid: 226d3b361da60a54f82885d512758169,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1719,7 +1719,7 @@ PrefabInstance:
     - target: {fileID: 8869196205912939822, guid: 226d3b361da60a54f82885d512758169,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.21
+      value: -3.11
       objectReference: {fileID: 0}
     - target: {fileID: 8869196205912939822, guid: 226d3b361da60a54f82885d512758169,
         type: 3}
@@ -1867,6 +1867,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4474290472232702592, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
+        type: 3}
+      propertyPath: bossSpawnBeat
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474290472232702592, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5338965398747753297, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5338965398747753308, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
         type: 3}
       propertyPath: m_Name
@@ -1927,22 +1942,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4474290472232702592, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
-        type: 3}
-      propertyPath: bossSpawnBeat
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4474290472232702592, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5338965398747753311, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5338965398747753297, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
         type: 3}
       propertyPath: m_Enabled
       value: 0
