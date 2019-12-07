@@ -661,6 +661,7 @@ GameObject:
   - component: {fileID: 531224458}
   - component: {fileID: 531224457}
   - component: {fileID: 531224459}
+  - component: {fileID: 531224460}
   m_Layer: 5
   m_Name: Meter
   m_TagString: Untagged
@@ -682,11 +683,11 @@ RectTransform:
   m_Father: {fileID: 1411872479}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -179.62, y: -240.2}
-  m_SizeDelta: {x: 200.76, y: 15.33}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.206, y: 0.02}
+  m_AnchorMax: {x: 0.475, y: 0.0782}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &531224457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -700,12 +701,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 69a2b55b1feae6e41bd2e884f4499c83, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 334e63918c5a4b24b9ba2cc7ac375be0, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -744,6 +745,26 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &531224460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531224455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a715167f7a79524a9e20f709748df36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frames:
+  - {fileID: 21300000, guid: 334e63918c5a4b24b9ba2cc7ac375be0, type: 3}
+  - {fileID: 21300000, guid: 9eb1930a4801409499a387239f1b731a, type: 3}
+  - {fileID: 21300000, guid: 278050b04cfd104419976c2d892aa730, type: 3}
+  - {fileID: 21300000, guid: cdc7d662163f16545a7d61835fe589b9, type: 3}
+  - {fileID: 21300000, guid: 14bc86f8d952ca34aa62bc574037a47b, type: 3}
+  - {fileID: 21300000, guid: f90fe63ad2262c14bb0c38251e3efb06, type: 3}
+  framesPerSecond: 10
 --- !u!1 &673406459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1387,7 +1408,7 @@ PrefabInstance:
     - target: {fileID: 6183971523639466879, guid: c772570857f13124c9ccf8b953ed6d2c,
         type: 3}
       propertyPath: meterfill
-      value: 100
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6183971523639466879, guid: c772570857f13124c9ccf8b953ed6d2c,
         type: 3}
