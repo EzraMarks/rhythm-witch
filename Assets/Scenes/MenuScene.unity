@@ -1671,16 +1671,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de8c764e4242d9841b02984d37ff7399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveup: {fileID: 8300000, guid: be31f3eaed4ee9f49bed14b209f80679, type: 3}
-  moveupgood: {fileID: 8300000, guid: be31f3eaed4ee9f49bed14b209f80679, type: 3}
-  movedown: {fileID: 8300000, guid: be31f3eaed4ee9f49bed14b209f80679, type: 3}
-  movedowngood: {fileID: 8300000, guid: be31f3eaed4ee9f49bed14b209f80679, type: 3}
+  moveup: {fileID: 8300000, guid: 30b9d43f903be0842a4a3166b449d3c4, type: 3}
+  moveupgood: {fileID: 8300000, guid: 30b9d43f903be0842a4a3166b449d3c4, type: 3}
+  movedown: {fileID: 8300000, guid: 30b9d43f903be0842a4a3166b449d3c4, type: 3}
+  movedowngood: {fileID: 8300000, guid: 30b9d43f903be0842a4a3166b449d3c4, type: 3}
   takedamage: {fileID: 8300000, guid: d2190d08a9089c548875e5cfef950109, type: 3}
-  bomb: {fileID: 8300000, guid: 322a63b2b46be4845ac84c466b31e706, type: 3}
-  startbutton: {fileID: 8300000, guid: 4af4bb8a6cc46f34a9bdbb06fc6ba2f2, type: 3}
-  buttonforward: {fileID: 8300000, guid: e01748954039fcc48a4a69cb8d01464d, type: 3}
-  buttonbackward: {fileID: 8300000, guid: d60b56e7f4852d94b8834058d851aa75, type: 3}
-  menumove: {fileID: 8300000, guid: bb383b1d8e647b14a9c9261414120863, type: 3}
+  bomb: {fileID: 8300000, guid: f881ea177e81ca2429034f93b898dcd0, type: 3}
+  startbutton: {fileID: 8300000, guid: 318eaf525cbf16f40a2f394c287053ec, type: 3}
+  buttonforward: {fileID: 8300000, guid: e7c26c053af47454eaa01b4782ade2dd, type: 3}
+  buttonbackward: {fileID: 8300000, guid: e11722cde8d23d34c8034235dc0e7ece, type: 3}
+  menumove: {fileID: 8300000, guid: 4f4b58d0a1acbf74da91baa3cd160823, type: 3}
 --- !u!82 &1501961624
 AudioSource:
   m_ObjectHideFlags: 0
