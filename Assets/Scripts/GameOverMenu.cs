@@ -25,6 +25,7 @@ public class GameOverMenu : MonoBehaviour
     public void MainMenu()
     {
         WitchSFX.ButtonBackward();
+        Destroy(GameObject.Find("Scorekeeper"));
         SceneManager.LoadScene("MenuScene");
     }
 
@@ -36,7 +37,8 @@ public class GameOverMenu : MonoBehaviour
 
     public void Retry()
     {
-        WitchSFX.ButtonForward();
+        WitchSFX.StartButton();
+        Destroy(GameObject.Find("Scorekeeper"));
         SceneManager.LoadScene("LevelScene");
     }
 

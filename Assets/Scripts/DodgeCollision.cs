@@ -84,6 +84,7 @@ public class DodgeCollision : MonoBehaviour
         //Cosmetic stuff for now; should be updated when bells and whistles get added
         //Destroy player object
         Destroy(GameObject.Find("Player").GetComponent<SpriteRenderer>());
+        Destroy(GameObject.Find("DamageAnimation"));
         //Wait several seconds
         yield return new WaitForSeconds(3);
         //Load Game Over screen
