@@ -368,7 +368,7 @@ MonoBehaviour:
     Ezra
 
 
-    Music/SFX
+    Sound
     & Level Design
 
     JD Calvelli'
@@ -1012,18 +1012,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Project Supervisor & GUI
+  m_Text: 'Project Supervisor & GUI Design
 
     Daniel Smith
 
 
-    Character & Effects Artist
+    Character & Effects
+    Artist
 
-    Frank
-    Liu
+    Frank Liu
 
 
-    Chris
+    Background Art & Design
 
     Nicole'
 --- !u!222 &2138703326
