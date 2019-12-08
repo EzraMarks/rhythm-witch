@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000076294, y: -255}
+  m_AnchoredPosition: {x: -0.0049973, y: -260}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &373314031
@@ -327,8 +327,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1, y: 0}
   m_AnchorMax: {x: 0.61, y: 0.74}
-  m_AnchoredPosition: {x: -11, y: 155.32}
-  m_SizeDelta: {x: -388.9, y: -203}
+  m_AnchoredPosition: {x: -11, y: 202.24}
+  m_SizeDelta: {x: -388.9, y: -109.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &836930114
 MonoBehaviour:
@@ -368,8 +368,8 @@ MonoBehaviour:
     Ezra
 
 
-    Music
-    & SFX & Level Design
+    Music/SFX
+    & Level Design
 
     JD Calvelli'
 --- !u!222 &836930115
@@ -644,7 +644,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1, y: 0}
   m_AnchorMax: {x: 0.61, y: 0.84}
-  m_AnchoredPosition: {x: 243, y: 312}
+  m_AnchoredPosition: {x: 271.58, y: 312.01}
   m_SizeDelta: {x: 0, y: -478.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1669406419
@@ -721,7 +721,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1, y: 0}
   m_AnchorMax: {x: 0.61, y: 0.64}
-  m_AnchoredPosition: {x: 243, y: -23}
+  m_AnchoredPosition: {x: 271.58, y: -39}
   m_SizeDelta: {x: 0, y: -397.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1846432962
@@ -978,8 +978,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1, y: 0}
   m_AnchorMax: {x: 0.61, y: 0.74}
-  m_AnchoredPosition: {x: 555.83997, y: 135.9}
-  m_SizeDelta: {x: -388.9, y: -241.8}
+  m_AnchoredPosition: {x: 555.83997, y: 161.8}
+  m_SizeDelta: {x: -388.9, y: -189.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2138703325
 MonoBehaviour:
@@ -1017,9 +1017,11 @@ MonoBehaviour:
     Daniel Smith
 
 
-    Artwork
+    Character & Effects Artist
 
     Frank
+    Liu
+
 
     Chris
 
