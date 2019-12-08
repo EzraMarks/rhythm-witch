@@ -125,25 +125,16 @@ public class PlayerController : MonoBehaviour
         }
         
         print("Distance is: " + distance);
-        if (distance < 1.2 && distance >= 1)
+        if (distance < 3 && distance >= 0)
         {
-            score += 100;
-            meterfill += 20;
-        }
-        if (distance < 1 && distance >= 0.8)
-        {
-            score += 300;
-            meterfill += 30;
-        }
-        if (distance < 0.8 && distance >= 0.7)
-        {
-            score += 500;
-            meterfill += 40;
-        }
-        if (distance < 0.7 && distance >= 0.6)
-        {
-            score += 1000;
-            meterfill += 50;
+            // distance 3 -> 2^0 = 1
+            // distance 2 -> 2^1 = 2
+            // distance 1 -> 2^2 = 4
+            // distance 0 -> 2^3 = 8
+            double exponentialDistance = System.Math.Pow(2, (3 - distance));
+            int pointReward = (int)(exponentialDistance * 2.5);
+            score += pointReward * 10;
+            meterfill += pointReward;
         }
 
         if (meterfill > 100)
