@@ -42,7 +42,7 @@ public class MainMenu : MonoBehaviour
     public void Credits()
     {
         WitchSFX.ButtonForward();
-        SceneManager.LoadScene("CreditsScene");
+        SceneManager.LoadScene("NewCreditsScene");
     }
 
     public void GameQuit()

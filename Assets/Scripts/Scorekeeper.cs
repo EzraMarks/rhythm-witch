@@ -17,6 +17,11 @@ public class Scorekeeper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    }
+
+    public void RecordScore()
+    {
         score = GameObject.Find("Player").GetComponent<PlayerController>().score;
     }
 }
