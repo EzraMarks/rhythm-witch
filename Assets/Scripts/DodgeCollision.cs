@@ -21,10 +21,16 @@ public class DodgeCollision : MonoBehaviour
 
     //The health bar's gameobject script "HealthBar"
     public HealthBar HealthBar;
+
+    //Scorekeeper object to assign score via scorekeeper script
+    public Scorekeeper Scorekeeper;
         
     // Start is called before the first frame update
     void Start()
     {
+        //Assign scorekeeper object
+        Scorekeeper = GameObject.Find("Scorekeeper").GetComponent<Scorekeeper>();
+        
         //Set player health value
         Health = 3;
 
@@ -38,6 +44,9 @@ public class DodgeCollision : MonoBehaviour
         //Check for it the player has run out of health
         if (Health == 0)
         {
+            //Record score via scorekeeper object + script
+            Scorekeeper.RecordScore();
+
             //COMMENT THIS COROUTINE OUT TO PREVENT GAME OVER WHILE TESTING
             //UN-COMMENT THIS FOR FINAL BUILD/PLAYTESTING!!!
             StartCoroutine(GameOver());
