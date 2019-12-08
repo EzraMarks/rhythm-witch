@@ -1382,16 +1382,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6183971523639466866, guid: c772570857f13124c9ccf8b953ed6d2c,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6183971523639466866, guid: c772570857f13124c9ccf8b953ed6d2c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6183971523639466864, guid: c772570857f13124c9ccf8b953ed6d2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1446,6 +1436,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183971523639466866, guid: c772570857f13124c9ccf8b953ed6d2c,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183971523639466866, guid: c772570857f13124c9ccf8b953ed6d2c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6183971523639466877, guid: c772570857f13124c9ccf8b953ed6d2c,
         type: 3}
@@ -1754,11 +1754,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8287727358890944122, guid: 226d3b361da60a54f82885d512758169,
-        type: 3}
-      propertyPath: m_Name
-      value: Health Bar
-      objectReference: {fileID: 0}
     - target: {fileID: 2815280037340178061, guid: 226d3b361da60a54f82885d512758169,
         type: 3}
       propertyPath: m_Sprite
@@ -1784,6 +1779,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8287727358890944122, guid: 226d3b361da60a54f82885d512758169,
+        type: 3}
+      propertyPath: m_Name
+      value: Health Bar
       objectReference: {fileID: 0}
     - target: {fileID: 8869196205912939822, guid: 226d3b361da60a54f82885d512758169,
         type: 3}
@@ -1941,11 +1941,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5338965398747753308, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
-        type: 3}
-      propertyPath: m_Name
-      value: Spawner
-      objectReference: {fileID: 0}
     - target: {fileID: 4474290472232702592, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
         type: 3}
       propertyPath: bossSpawnBeat
@@ -1970,14 +1965,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
-<<<<<<< HEAD
-=======
       objectReference: {fileID: 0}
     - target: {fileID: 5338965398747753308, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
         type: 3}
       propertyPath: m_Name
       value: Spawner
->>>>>>> dd9d39c090625e9ac9b5a416dd1a51567d39207a
       objectReference: {fileID: 0}
     - target: {fileID: 5338965398747753310, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
         type: 3}
