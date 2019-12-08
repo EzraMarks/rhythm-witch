@@ -496,7 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a78d6e4dd9fba414c9f1ab7ca3b07526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WitchSFX: {fileID: 1501961623}
+  WitchSFX: {fileID: 0}
   menumusic: {fileID: 0}
 --- !u!1 &734075382
 GameObject:
@@ -1685,7 +1685,7 @@ GameObject:
   - component: {fileID: 1501961623}
   m_Layer: 0
   m_Name: BackgroundSpawner
-  m_TagString: Background
+  m_TagString: BackgroundSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1730,7 +1730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aefebe89213966f4aa324169e3b4dd95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundSpawnPeriod: 6.35
+  backgroundSpawnPeriod: 6.14
   layer: {fileID: 6250430991154248537, guid: ca67f04e75403da4696c5f112616df32, type: 3}
 --- !u!4 &1501961621
 Transform:

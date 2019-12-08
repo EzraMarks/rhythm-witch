@@ -1482,6 +1482,18 @@ PrefabInstance:
       propertyPath: moveSound
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6183971523639466879, guid: c772570857f13124c9ccf8b953ed6d2c,
+        type: 3}
+      propertyPath: powerBarFullPrefab
+      value: 
+      objectReference: {fileID: 4537494706119123303, guid: f7f9d89fc71f3e64ca2cd86e6ca658c4,
+        type: 3}
+    - target: {fileID: 6183971523639466879, guid: c772570857f13124c9ccf8b953ed6d2c,
+        type: 3}
+      propertyPath: powerBarFullAnimation
+      value: 
+      objectReference: {fileID: 4537494706119123303, guid: f7f9d89fc71f3e64ca2cd86e6ca658c4,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c772570857f13124c9ccf8b953ed6d2c, type: 3}
 --- !u!1 &1916841779 stripped
@@ -1952,7 +1964,7 @@ PrefabInstance:
     - target: {fileID: 5338965398747753297, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5338965398747753308, guid: 7830b703dbc2a3a4c82aae3f6a5ef6e3,
         type: 3}

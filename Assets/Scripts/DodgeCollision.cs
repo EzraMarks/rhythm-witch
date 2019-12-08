@@ -95,7 +95,7 @@ public class DodgeCollision : MonoBehaviour
         Destroy(GameObject.Find("Player").GetComponent<SpriteRenderer>());
         Destroy(GameObject.Find("DamageAnimation"));
         //Wait several seconds
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         //Load Game Over screen
         SceneManager.LoadScene("GameOverScene");
     }
