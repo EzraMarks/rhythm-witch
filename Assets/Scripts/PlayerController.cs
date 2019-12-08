@@ -58,6 +58,12 @@ public class PlayerController : MonoBehaviour
     //Boolean to trigger boss phase changes
     public bool bossgothurt = false;
 
+    //Boolean that is true when meter is full
+    bool meterFull = false;
+
+    // GameObject with powerbar full animation
+    public GameObject powerBarFullAnimation;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,6 +79,8 @@ public class PlayerController : MonoBehaviour
         {
             //Empty meter
             meterfill = 10;
+            meterFull = false;
+            Destroy(GameObject.FindGameObjectsWithTag("PowerBarFull")[0]);
 
             //Start IEnumerator BossHurt to temporarily set boss spawning parameters
             StartCoroutine(BossHurt());
@@ -124,7 +132,6 @@ public class PlayerController : MonoBehaviour
             }
         }
         
-        print("Distance is: " + distance);
         if (distance < 3 && distance >= 0)
         {
             // distance 3 -> 2^0 = 1
@@ -133,13 +140,20 @@ public class PlayerController : MonoBehaviour
             // distance 0 -> 2^3 = 8
             double exponentialDistance = System.Math.Pow(2, (3 - distance));
             int pointReward = (int)(exponentialDistance * 2.5);
-            score += pointReward * 10;
+            score += pointReward;
             meterfill += pointReward;
         }
 
         if (meterfill > 100)
         {
             meterfill = 100;
+        }
+
+        if ((meterfill == 100) && meterFull == false)
+        {
+            // spawn power bar full animation prefab
+            Instantiate(powerBarFullAnimation);
+            meterFull = true;
         }
     }
 
@@ -228,7 +242,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //If right arrow key is pressed, the bomb goes off
-        if (Input.GetKeyDown (KeyCode.RightArrow))
+        if (Input.GetKeyDown (KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.Space))
         {
             Bomb();
             //Debug print
@@ -236,14 +250,14 @@ public class PlayerController : MonoBehaviour
         }
 
         // if up key is pressed
-        if (Input.GetKeyDown(KeyCode.UpArrow) && playermovingup == false && playermovingdown == false)
+        if ((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) && playermovingup == false && playermovingdown == false)
         {
             playermovingup = true;
             MoveUp();
         }
 
         // if down key is pressed
-        if (Input.GetKeyDown(KeyCode.DownArrow) && playermovingdown == false && playermovingup == false)
+        if ((Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && playermovingdown == false && playermovingup == false)
         {
             playermovingdown = true;
             MoveDown();
