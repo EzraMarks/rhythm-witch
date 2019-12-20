@@ -22,14 +22,14 @@ public class HealthBar : MonoBehaviour
         GifAnimator GifAnimator = GetComponent<GifAnimator>();
 
         //Assign frames for full health bar
-        GifAnimator.frames[0] = frameReservoir[16];
-        GifAnimator.frames[1] = frameReservoir[17];
-        GifAnimator.frames[2] = frameReservoir[18];
-        GifAnimator.frames[3] = frameReservoir[19];
-        GifAnimator.frames[4] = frameReservoir[20];
-        GifAnimator.frames[5] = frameReservoir[21];
-        GifAnimator.frames[6] = frameReservoir[22];
-        GifAnimator.frames[7] = frameReservoir[23];
+        GifAnimator.frames[0] = frameReservoir[0];
+        GifAnimator.frames[1] = frameReservoir[1];
+        GifAnimator.frames[2] = frameReservoir[2];
+        GifAnimator.frames[3] = frameReservoir[3];
+        GifAnimator.frames[4] = frameReservoir[4];
+        GifAnimator.frames[5] = frameReservoir[5];
+        GifAnimator.frames[6] = frameReservoir[6];
+        GifAnimator.frames[7] = frameReservoir[7];
 
     }
 
@@ -72,15 +72,15 @@ public class HealthBar : MonoBehaviour
             //Gif Animator script, so that animation can be changed
             GifAnimator GifAnimator = GetComponent<GifAnimator>();
 
-            //Assign frames for health bar with two hearts
-            GifAnimator.frames[0] = frameReservoir[0];
-            GifAnimator.frames[1] = frameReservoir[1];
-            GifAnimator.frames[2] = frameReservoir[2];
-            GifAnimator.frames[3] = frameReservoir[3];
-            GifAnimator.frames[4] = frameReservoir[4];
-            GifAnimator.frames[5] = frameReservoir[5];
-            GifAnimator.frames[6] = frameReservoir[6];
-            GifAnimator.frames[7] = frameReservoir[7];
+            //Assign frames for health bar with one heart
+            GifAnimator.frames[0] = frameReservoir[16];
+            GifAnimator.frames[1] = frameReservoir[17];
+            GifAnimator.frames[2] = frameReservoir[18];
+            GifAnimator.frames[3] = frameReservoir[19];
+            GifAnimator.frames[4] = frameReservoir[20];
+            GifAnimator.frames[5] = frameReservoir[21];
+            GifAnimator.frames[6] = frameReservoir[22];
+            GifAnimator.frames[7] = frameReservoir[23];
         }
 
         //For losing the final heart and losing
@@ -92,7 +92,7 @@ public class HealthBar : MonoBehaviour
             //Gif Animator script, so that animation can be changed
             GifAnimator GifAnimator = GetComponent<GifAnimator>();
 
-            //Assign frames for health bar with two hearts
+            //Assign frames for health bar with zero hearts
             GifAnimator.frames[0] = frameReservoir[24];
             GifAnimator.frames[1] = frameReservoir[24];
             GifAnimator.frames[2] = frameReservoir[24];
