@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 4701980369882378425}
   - component: {fileID: -6747030976251125898}
   - component: {fileID: 9165664913658717465}
+  - component: {fileID: 422391612938951474}
+  - component: {fileID: -8727764623490035379}
   m_Layer: 0
   m_Name: boss3
   m_TagString: Enemy
@@ -123,7 +125,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7202132772418885958}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eeaebef1afa2890478662109a0dead31, type: 3}
   m_Name: 
@@ -134,7 +136,6 @@ MonoBehaviour:
   loopDurationInBeats: 64
   muteMusicObject: 
   unmuteMusicObject: 
-  unmuteMusicVolume: 1
 --- !u!114 &9165664913658717465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,7 +143,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7202132772418885958}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eeaebef1afa2890478662109a0dead31, type: 3}
   m_Name: 
@@ -153,4 +154,39 @@ MonoBehaviour:
   loopDurationInBeats: 64
   muteMusicObject: Boss2Music
   unmuteMusicObject: Boss3Music
-  unmuteMusicVolume: 1
+--- !u!114 &422391612938951474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7202132772418885958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ca4be8c683c024084aaa441c3b5172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 6051935948728285761, guid: 260a45b25388d1d4c9920cbf8fb779e5, type: 3}
+  enemyIdentifier: 98
+  bossPhaseNumber: 3
+  loopDurationInBeats: 64
+  muteMusicObject: 
+  unmuteMusicObject: 
+--- !u!114 &-8727764623490035379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7202132772418885958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ca4be8c683c024084aaa441c3b5172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 3666944615530212765, guid: 754761cf937a10749997caabc5f8caf6, type: 3}
+  enemyIdentifier: 107
+  bossPhaseNumber: 3
+  loopDurationInBeats: 64
+  muteMusicObject: Boss2Music
+  unmuteMusicObject: Boss3Music

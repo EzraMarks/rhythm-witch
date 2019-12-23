@@ -326,8 +326,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 239.34499, y: -57.000023}
-  m_SizeDelta: {x: -478.69, y: -113.999954}
+  m_AnchoredPosition: {x: -232.5, y: -57.000023}
+  m_SizeDelta: {x: 465, y: -113.999954}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &836930114
 MonoBehaviour:
@@ -360,16 +360,21 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Programming Leads & Gameplay
+  m_Text: 'Programming Leads & Gameplay:
 
     Tobias Clevinger
 
     Ezra Marks
 
 
-    Sound & Level Design
+    Sound & Level Design:
 
-    JD Calvelli'
+    JD Calvelli
+
+
+    Storyboarding:
+
+    Ryan Adell'
 --- !u!222 &836930115
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1055,8 +1060,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -224.7, y: -57}
-  m_SizeDelta: {x: 449.4, y: -114}
+  m_AnchoredPosition: {x: 232.5, y: -57}
+  m_SizeDelta: {x: -465, y: -114}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2138703325
 MonoBehaviour:
@@ -1089,19 +1094,19 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Project Supervisor & GUI Design
+  m_Text: 'Project Supervisor & GUI Design:
 
     Daniel Smith
 
 
-    Character & Effects Artist
+    Character & Effects Artists:
 
     Frank Liu
 
     Chris Luke
 
 
-    Background Art & Design
+    Background Art & Design:
 
     Nicole Strubinski'
 --- !u!222 &2138703326
