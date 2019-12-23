@@ -25,12 +25,27 @@ public class Composer : MonoBehaviour
     //Adjustable offset for first beat of song
     public float firstBeatOffset;
 
+    //Boolean that keeps beat counter from starting until song starts
+    bool songstarted;
+
     // Start is called before the first frame update
     void Start()
     {
+        //Keeps update function from running until it's time
+        songstarted = false;
+        
         //Load the AudioSource attached to the Conductor
         musicSource = GetComponent<AudioSource>();
 
+        //Coroutine that starts the song after it's had time to load properly
+        StartCoroutine(SongStart());
+    }
+
+    IEnumerator SongStart()
+    {
+        //Waits to let song load before playing
+        yield return new WaitForSeconds(2);
+        
         //Find seconds per song beat
         secPerBeat = 60f / songBPM;
 
@@ -39,15 +54,22 @@ public class Composer : MonoBehaviour
 
         //Start playing the music
         musicSource.Play();
+
+        //Gives the go-ahead to the update function
+        songstarted = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //find how many seconds since the song started
-        songPosition = (float)(AudioSettings.dspTime - dspSongTime - firstBeatOffset);
+        //if function keeps game from counting beats until song starts, to prevent bugs
+        if (songstarted == true)
+        {
+            //find how many seconds since the song started
+            songPosition = (float)(AudioSettings.dspTime - dspSongTime - firstBeatOffset);
 
-        //find how many beats since the song started
-        songPositionInBeats = songPosition / secPerBeat;
+            //find how many beats since the song started
+            songPositionInBeats = songPosition / secPerBeat;
+        }
     }
 }
