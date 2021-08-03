@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+    margin: 0;
+}
+
+/* Makes unity player scale to screen size. */
+
+#unityContainer {
+    width: min(100vw, 177.777777777vh);
+    height: min(56.25vw, 100vh);
+}
+
+.webgl-content {
+    width: min(100vw, 177.777777777vh);
+    height: min(56.25vw, 100vh);
+    margin: auto;
+}
